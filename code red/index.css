@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0c1b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  background: transparent;
+}
+
+.left-box {
+  background: #1b1d3c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.left-box h2 {
+  transition: all 0.3s ease;
+}
+
+.left-box h2:hover {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+  transform: scale(1.1);
+}
+
+.icons {
+  margin-top: 15px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.right-box {
+  background: #1b1d3c;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+}
+
+.bubble {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  background: white;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+p {
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.used {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.progress-bar {
+  background: #3b3f5c;
+  border-radius: 10px;
+  height: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.progress {
+  background: #e74c3c;
+  height: 100%;
+  width: 81.5%;
+  box-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c;
+  animation: glow 1.5s infinite alternate;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* Hover Glow + Scale Effects */
+.right-box p:hover {
+  color: #ff6b6b;
+  text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+  transform: scale(1.1);
+}
+
+.bubble:hover {
+  background: #ff6b6b;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+}
+
+/* Glow animation for progress bar */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c;
+  }
+  100% {
+    box-shadow: 0 0 15px #ff6b6b, 0 0 25px #ff6b6b;
+  }
+}
